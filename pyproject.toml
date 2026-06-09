@@ -15,7 +15,6 @@ dependencies = [
 entrypoint = "app.main:app"
 
 [tool.ruff]
-# Exclude a variety of commonly ignored directories.
 exclude = [
     ".git",
     ".ruff_cache",
@@ -23,18 +22,39 @@ exclude = [
     "alembic",
     ".vscode",
 ]
+include = ["*.py"]
 
 line-length = 120
 indent-width = 4
 
+output-format = "full"
+
+show-fixes = true
+unsafe-fixes = false
+
 target-version = "py314"
 
 [tool.ruff.lint]
-select = ["E4", "E7", "E9", "F"]
+select = ["E4", "E7", "E9", "F", "I"]
 ignore = []
 
 fixable = ["ALL"]
 unfixable = []
+
+preview = true
+
+[tool.ruff.lint.isort]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+combine-as-imports = true
+split-on-trailing-comma = true
+no-sections = false
+lines-after-imports = 2
 
 
 [tool.ruff.format]
@@ -42,6 +62,7 @@ quote-style = "double"
 indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "auto"
+preview = true
 
-docstring-code-format = false
+docstring-code-format = true
 docstring-code-line-length = "dynamic"
