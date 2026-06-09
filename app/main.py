@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 
+from app.transport.api.base import router
+
+
 app = FastAPI()
 
-
-@app.get("/")
-async def health():
-    return {"message": "ok"}
+app.include_router(router)
