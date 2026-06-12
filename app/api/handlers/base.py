@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.transport.api.posts import router as posts_router
+from app.api.handlers.posts import router as posts_router
 
 
 router = APIRouter()
