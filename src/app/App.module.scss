@@ -1,5 +1,15 @@
-@use "/src/shared/styles/vars.scss" as *;
+.app {
+    overflow: hidden;
+    display: flex;
+    min-height: 100vh;
+    background: var(--primary-background-color);
+    justify-content: center;
+}
 
-.background {
-    background-color: $primary-backgorund-color;
+.text {
+    margin-top: 50px;
+    color: white;
+    width: 80%;
+    display: flex;
+    justify-content: center;
 }
