@@ -3,7 +3,7 @@ from fastapi import APIRouter
 from app.api.handlers.posts import router as posts_router
 
 
-router = APIRouter()
+router = APIRouter(prefix="/api")
 
 router.include_router(posts_router)
 
