@@ -1,4 +1,3 @@
-/** Type of error received after the request. */
 export interface ErrorType {
   readonly message: string;
   readonly messageError?: string;
@@ -9,7 +8,6 @@ export interface ErrorType {
   };
 }
 
-/** Type of error sent to the storage. */
 export interface RejectedDataType {
   readonly messageError: string;
   readonly status?: string | number;

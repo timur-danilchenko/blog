@@ -1,7 +1,7 @@
-// import { IPost } from "shared/types";
-import { IPost } from '../../../../shared/types';
-
+import { IPost, RejectedDataType, RequestStatus } from 'shared/types';
 
 export interface PostsSchema {
-    posts: IPost[];
+  posts: IPost[];
+  getAllStatus: RequestStatus | null;
+  getAllError: RejectedDataType | null;
 }

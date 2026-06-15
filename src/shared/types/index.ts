@@ -1,1 +1,2 @@
-export { type IPost } from "./post";
+export * from './post';
+export * from './common';

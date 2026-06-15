@@ -3,11 +3,12 @@
 @use 'common';
 @use 'fonts';
 
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    color: var(--primary-background-color);
+  background-color: var(--primary-background-color);
 }

@@ -1,8 +1,8 @@
 export interface IPaginationResults<T> {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: T[];
+  total: number;
+  page: number;
+  size: number;
+  items: T[];
 }
 
 export enum RequestStatus {

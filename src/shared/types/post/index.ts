@@ -1,1 +1,1 @@
-export { type IPost } from "./types";
+export { type IPost } from './types';

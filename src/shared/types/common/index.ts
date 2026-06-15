@@ -1,2 +1,3 @@
-export * from './errors'
-export * from './requests'
+export { type ErrorType, type RejectedDataType } from './errors';
+
+export { RequestStatus, type IPaginationResults } from './requests';
