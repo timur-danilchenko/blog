@@ -1,7 +1,23 @@
-.post {
+.wrapper {
   background-color: var(--primary-content-color);
   margin: 10px;
   padding: 10px;
   border-radius: 15px;
   color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: white 1px solid;
+}
+
+.label {
+  font-family: 'Lobster';
+  font-size: var(--header-font-size);
+}
+
+.content {
+  margin-top: 10px;
+  font-size: var(--default-font-size);
 }
