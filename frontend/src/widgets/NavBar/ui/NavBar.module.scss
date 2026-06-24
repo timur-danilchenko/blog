@@ -1,0 +1,21 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: var(--navbar-height);
+  padding: var(--default-padding);
+  background-color: #000000;
+  color: white;
+  gap: var(--default-gap);
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+
+  .item {
+    font-family: 'Bitcount';
+    font-size: var(--header-font-size);
+  }
+  .item:hover {
+    animation: 'blink' 1s infinite linear;
+  }
+}

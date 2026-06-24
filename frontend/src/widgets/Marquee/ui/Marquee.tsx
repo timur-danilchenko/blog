@@ -27,7 +27,7 @@ export const Marquee: FC<MarqueeProps> = ({ content }) => {
 
   return (
     <div
-      className={cls.wrapper}
+      className={cls.marquee}
       ref={wrapperRef}
     >
       <div

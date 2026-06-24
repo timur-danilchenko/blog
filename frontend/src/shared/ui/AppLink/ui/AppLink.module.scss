@@ -1,0 +1,29 @@
+.AppLink {
+  position: relative;
+  font: var(--font-m);
+  font-family: var(--font-family-secondary);
+  font-weight: 500;
+}
+
+.WithHover::after {
+  content: '';
+
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 0;
+  height: 1px;
+
+  opacity: 0.5;
+  background: var(--primary-color);
+
+  transition: all 0.2s;
+}
+
+.WithHover:hover {
+  &::after {
+    width: 100%;
+  }
+}
