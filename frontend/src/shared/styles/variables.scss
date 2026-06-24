@@ -1,13 +1,24 @@
 :root {
-  --header-font-size: 24px;
-  --default-font-size: 16px;
-  --primary-background-color: #101010;
-  --primary-content-color: #303030;
-  --default-padding: 5px;
+  // Background
+  --primary-background-color: #000000;
+  --navbar-background-color: #000000;
+  --primary-content-block-color: #000000;
+  --primary-code-block-color: #3f0303;
+
+  // Widths & Heights
+  --navbar-height: calc(var(--header-font-size) * 1.5);
+
+  // Text
   --primary-font-color: #ffffff;
   --second-font-color: #000000;
-  --primary-block-color: #2e2e2e;
-  --primary-border-radius: 10px;
+  --header-font-size: 24px;
+  --default-font-size: 16px;
+
+  // Margins & Paddings
+  --default-padding: 5px;
+  --default-margin: 10px;
   --default-gap: 10px;
-  --navbar-height: calc(var(--header-font-size) * 1.5);
+
+  // Border
+  --primary-border-radius: 10px;
 }

@@ -4,8 +4,8 @@
   top: 0;
   height: var(--navbar-height);
   padding: var(--default-padding);
-  background-color: #000000;
-  color: white;
+  background-color: var(--navbar-background-color);
+  color: var(--primary-font-color);
   gap: var(--default-gap);
   display: flex;
   justify-content: center;

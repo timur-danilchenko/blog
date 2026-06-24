@@ -3,13 +3,13 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: var(--navbar-height);
+  margin-top: calc(var(--navbar-height) + var(--default-margin));
   gap: 10px;
 }
 
-.block {
+.content-block {
   width: 75%;
-  background-color: var(--primary-block-color);
+  background-color: var(--primary-content-block-color);
   font-family: Arial, Helvetica, sans-serif;
   border-radius: var(--primary-border-radius);
   padding: calc(var(--default-padding) * 2);
@@ -17,14 +17,25 @@
   gap: var(--default-gap);
 }
 
+.code-block {
+  background-color: var(--primary-code-block-color);
+  padding: var(--default-padding);
+  border-radius: var(--primary-border-radius);
+  width: fit-content;
+  gap: var(--default-gap);
+}
+
+$color: var(--primary-font-color);
+$background-color: var(--primary-background-color);
+
 @keyframes blink {
   0% {
-    color: white;
+    color: $color;
   }
   50% {
-    color: black;
+    color: $background-color;
   }
   100% {
-    color: white;
+    color: $color;
   }
 }
