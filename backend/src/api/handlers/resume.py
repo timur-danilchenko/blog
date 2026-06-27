@@ -1,9 +1,9 @@
 from fastapi import APIRouter, status
 
-from app.api.schemas.info import ResumeResponse
+from src.api.schemas.resume import ResumeResponse
 
 
-router = APIRouter(prefix="/info")
+router = APIRouter(prefix="/resume")
 
 
 @router.get(

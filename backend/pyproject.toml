@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [tool.fastapi]
-entrypoint = "app.main:app"
+entrypoint = "src.main:app"
 
 [tool.ruff]
 exclude = [
@@ -24,7 +24,7 @@ exclude = [
     ".vscode",
 ]
 include = ["*.py"]
-src = ["backend"]
+src = ["backend/src"]
 
 line-length = 120
 indent-width = 4
@@ -53,7 +53,8 @@ section-order = [
     "first-party",
     "local-folder",
 ]
-known-first-party = ["app"]
+known-local-folder = ["src"]
+
 combine-as-imports = true
 split-on-trailing-comma = true
 no-sections = false

@@ -4,10 +4,10 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from app.api.schemas.base import PaginatedResponse, PaginationRequest, paginate
-from app.api.schemas.post import CreatePostRequest, PostResponse
-from app.database.session import get_db
-from app.domain.models.post import Post
+from src.api.schemas.base import PaginatedResponse, PaginationRequest, paginate
+from src.api.schemas.post import CreatePostRequest, PostResponse
+from src.database.session import get_db
+from src.domain.models.post import Post
 
 
 router = APIRouter(prefix="/posts")
