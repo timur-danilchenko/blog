@@ -1,0 +1,20 @@
+.header {
+  font-weight: bold;
+  font-size: var(--header-font-size);
+  border-bottom: 1px white solid;
+}
+.spcbtwn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-gap);
+  padding-left: calc(var(--default-padding) * 3);
+}
+
+.content li {
+  list-style: square;
+}

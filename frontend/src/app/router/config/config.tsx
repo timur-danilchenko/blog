@@ -1,7 +1,7 @@
 import { PathRouteProps } from 'react-router-dom';
 
 import { PostsPage } from 'pages/PostsPage';
-import { RootPage } from 'pages/RootPage';
+import { ResumePage } from 'pages/ResumePage';
 import { AppRoutes } from 'shared/consts';
 
 interface AppRouteProps extends PathRouteProps {
@@ -19,10 +19,10 @@ export const config: Record<AppRoutes, AppRouteProps> = {
     isPublic: true,
     pageClassname: 'page-flex page-full',
   },
-  [AppRoutes.ROOT]: {
-    name: 'root',
-    path: AppRoutes.ROOT,
-    element: <RootPage />,
+  [AppRoutes.RESUME]: {
+    name: 'resume',
+    path: AppRoutes.RESUME,
+    element: <ResumePage />,
     isPublic: true,
     pageClassname: 'page-flex page-full',
   },

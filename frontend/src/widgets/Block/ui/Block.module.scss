@@ -1,0 +1,18 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-block-color);
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: var(--primary-border-radius);
+  padding: calc(var(--default-padding) * 2);
+  gap: var(--default-gap);
+}
+
+.title {
+  font-size: var(--header-font-size);
+  border-bottom: 1px white solid;
+}
+
+.content {
+  font-size: var(--default-font-size);
+}

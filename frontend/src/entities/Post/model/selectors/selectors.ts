@@ -4,19 +4,16 @@ import { RootReducer } from 'app/store';
 
 import { PostsSchema } from '../types/types';
 
-export const selectFullPostsData = (state: RootReducer) => state.posts;
+export const selectPostsSchemaData = (state: RootReducer) => state.posts;
 
-export const selectAllPosts = createSelector(
-  selectFullPostsData,
-  (data: PostsSchema) => data.posts,
-);
+export const selectPosts = createSelector(selectPostsSchemaData, (data: PostsSchema) => data.posts);
 
 export const selectPostsGetAllStatus = createSelector(
-  selectFullPostsData,
+  selectPostsSchemaData,
   (data: PostsSchema) => data.getAllStatus,
 );
 
 export const selectPostsGetAllError = createSelector(
-  selectFullPostsData,
+  selectPostsSchemaData,
   (data: PostsSchema) => data.getAllError,
 );

@@ -8,7 +8,7 @@ export const getAllPosts = createAsyncThunk<
   IPaginationResults<IPost>,
   void,
   { readonly rejectValue: RejectedDataType }
->('/getAllPosts', async (_, thunkApi) => {
+>('/posts/list', async (_, thunkApi) => {
   try {
     const response = await postApiClient.getAll<IPost>();
     return response.data;

@@ -19,18 +19,20 @@ export const Navbar: FC = () => {
 
   return (
     <div className={cls.navbar}>
-      {navbarConfig.map((item) => {
-        return (
-          <AppLink
-            key={item.text}
-            to={item.link}
-            onClick={() => handleLinkClick({ to: item.link })}
-            className={cls.item}
-          >
-            {item.text}
-          </AppLink>
-        );
-      })}
+      <div className={cls.card}>
+        {navbarConfig.map((item) => {
+          return (
+            <AppLink
+              key={item.text}
+              to={item.link}
+              onClick={() => handleLinkClick({ to: item.link })}
+              className={cls.item}
+            >
+              {item.text}
+            </AppLink>
+          );
+        })}
+      </div>
     </div>
   );
 };

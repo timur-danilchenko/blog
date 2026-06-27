@@ -1,2 +1,2 @@
-export {PostsPage} from "./PostsPage";
-export {RootPage} from "./RootPage";
+export { PostsPage } from './PostsPage';
+export { ResumePage } from './ResumePage';

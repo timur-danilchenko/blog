@@ -3,8 +3,8 @@ import { INavbarConfig, NavbarKeys } from 'shared/types/navbar/navbar';
 
 export const navbarConfig: INavbarConfig[] = [
   {
-    text: NavbarKeys.root,
-    link: AppRoutes.ROOT,
+    text: NavbarKeys.resume,
+    link: AppRoutes.RESUME,
   },
   {
     text: NavbarKeys.posts,

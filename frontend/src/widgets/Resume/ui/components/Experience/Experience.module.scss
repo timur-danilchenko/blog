@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  font-size: var(--header-font-size);
+  font-weight: bold;
+}
+
+.spcbtwn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  gap: var(--default-gap);
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--default-margin);
+  gap: calc(var(--default-gap) / 2);
+  padding-left: calc(var(--default-padding) * 3);
+}
+
+.content li {
+  list-style: square;
+}
+
+.bold {
+  font-weight: bold;
+}

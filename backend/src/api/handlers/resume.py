@@ -12,4 +12,12 @@ router = APIRouter(prefix="/resume")
     status_code=status.HTTP_200_OK,
 )
 def resume():
-    return ResumeResponse(summary="Hello, World!")
+    summary = """
+        Hello, my name is Timur, but every one calls me Tim.
+        I'm Software Developer with 3 years of experience in industry.
+        Primarily works on backend using Python as main programming language,
+        marginally works on frontend using TypeScript.
+        Familliar with using Django, FastAPI, React.
+    """
+
+    return ResumeResponse(summary=summary)

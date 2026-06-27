@@ -1,0 +1,1 @@
+export { getResumeSummary } from './GetResumeSummaryThunk';

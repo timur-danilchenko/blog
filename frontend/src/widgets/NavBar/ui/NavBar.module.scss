@@ -3,19 +3,33 @@
   width: 100%;
   top: 0;
   height: var(--navbar-height);
-  padding: var(--default-padding);
-  background-color: var(--navbar-background-color);
+  display: flex;
+  margin-top: var(--default-margin);
+  // padding: var(--default-padding);
   color: var(--primary-font-color);
   gap: var(--default-gap);
-  display: flex;
   justify-content: center;
   z-index: 99;
+  font-family: 'Bitcount';
+  font-size: var(--header-font-size);
+}
 
-  .item {
-    font-family: 'Bitcount';
-    font-size: var(--header-font-size);
-  }
-  .item:hover {
-    animation: 'blink' 1s infinite linear;
-  }
+.card {
+  display: flex;
+  background-color: var(--navbar-background-color);
+  width: 75%;
+
+  justify-content: center;
+  align-items: center;
+  gap: var(--default-gap);
+  border-radius: var(--navbar-border-radius);
+}
+
+.item {
+  height: fit-content;
+  text-align: center;
+}
+
+.item:hover {
+  animation: 'blink' 1s infinite linear;
 }

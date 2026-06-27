@@ -1,7 +1,7 @@
 import type { AppRoutes } from 'shared/consts';
 
 export enum NavbarKeys {
-  root = 'root',
+  resume = 'resume',
   posts = 'posts',
 }
 

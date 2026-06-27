@@ -1,7 +1,7 @@
 import { FC, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import { selectAllPosts, getAllPosts, Post } from 'entities/Post';
+import { selectPosts, getAllPosts, Post } from 'entities/Post';
 import { useAppDispatch } from 'shared/hooks';
 
 import cls from './PostsPage.module.scss';
@@ -9,7 +9,7 @@ import { Marquee } from 'widgets/Marquee';
 
 const PostsPage: FC = () => {
   const dispatch = useAppDispatch();
-  const posts = useSelector(selectAllPosts);
+  const posts = useSelector(selectPosts);
 
   const content = ['super', 'long', 'line', 'with'];
 
@@ -29,6 +29,7 @@ const PostsPage: FC = () => {
                 post={post}
               />
             ))}
+          {posts.length == 0 && <p>Нет постов</p>}
         </div>
       </div>
     </>

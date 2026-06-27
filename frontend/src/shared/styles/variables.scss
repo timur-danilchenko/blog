@@ -1,12 +1,13 @@
 :root {
   // Background
   --primary-background-color: #000000;
-  --navbar-background-color: #000000;
-  --primary-content-block-color: #000000;
+
+  --primary-block-color: #2a2a2a;
+  --navbar-background-color: var(--primary-block-color);
   --primary-code-block-color: #3f0303;
 
   // Widths & Heights
-  --navbar-height: calc(var(--header-font-size) * 1.5);
+  --navbar-height: 40px;
 
   // Text
   --primary-font-color: #ffffff;
@@ -20,5 +21,6 @@
   --default-gap: 10px;
 
   // Border
-  --primary-border-radius: 10px;
+  --navbar-border-radius: 25px;
+  --primary-border-radius: 15px;
 }

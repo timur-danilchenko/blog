@@ -10,5 +10,6 @@ body {
 }
 
 body {
+  margin-top: calc(var(--navbar-height) + 2 * var(--default-margin));
   background-color: var(--primary-background-color);
 }
