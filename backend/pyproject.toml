@@ -24,6 +24,7 @@ exclude = [
     ".vscode",
 ]
 include = ["*.py"]
+src = ["backend"]
 
 line-length = 120
 indent-width = 4
@@ -52,6 +53,7 @@ section-order = [
     "first-party",
     "local-folder",
 ]
+known-first-party = ["app"]
 combine-as-imports = true
 split-on-trailing-comma = true
 no-sections = false

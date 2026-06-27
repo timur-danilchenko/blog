@@ -26,7 +26,8 @@ async def create(
     db.add(post)
     db.commit()
     db.refresh(post)
-    return post
+    response = PostResponse.model_validate(post)
+    return response
 
 
 @router.get(
