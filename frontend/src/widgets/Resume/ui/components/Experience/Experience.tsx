@@ -1,11 +1,14 @@
 import dayjs from 'dayjs';
 import { FC } from 'react';
 
-import { classNames } from 'shared/lib';
 import { IResumeExperience, MONTH_FORMAT } from 'shared/types';
 
-import cls from './Experience.module.scss';
 import { Row } from 'widgets/Row';
+import { Block } from 'widgets/Block';
+import { Header } from 'widgets/Header';
+import { Bubble } from 'widgets/Bubble';
+
+import cls from './Experience.module.scss';
 
 interface ExperienceProps {
   experience: IResumeExperience[] | null;
@@ -13,34 +16,45 @@ interface ExperienceProps {
 
 export const Experience: FC<ExperienceProps> = ({ experience }) => {
   if (experience === null || experience === undefined) {
-    return <div className={classNames('block', {}, ['width4'])}>Опыт не подгрузился</div>;
+    return <Block className='width4'>Опыт не подгрузился</Block>;
   }
 
   return (
-    <div className={classNames('block', {}, ['width4'])}>
-      <div className={cls.header}>Experience</div>
+    <Block className='width4'>
+      <Header
+        header='Experience'
+        underline
+      />
       {experience.map((item) => (
-        <div key={item.name}>
+        <div
+          key={item.name}
+          className={cls.wrapper}
+        >
           <Row className={cls.spcbtwn}>
-            <div className={cls.bold}>{item.name}</div>
-            <div>{item.location}</div>
+            <div className={cls.left}>{item.name}</div>
+            <div className={cls.right}>{item.location}</div>
           </Row>
           <Row className={cls.spcbtwn}>
-            <div className={cls.bold}>
-              {item.position} ({item.stack.join(', ')})
-            </div>
-            <div>
+            <div className={cls.left}>{item.position}</div>
+            <div className={cls.right}>
               {dayjs(item.since).format(MONTH_FORMAT)}-{dayjs(item.until).format(MONTH_FORMAT)}
             </div>
           </Row>
-
-          <ul className={cls.content}>
-            {item.details.map((detail) => (
-              <li>{detail}</li>
+          <Row className={cls.tools}>
+            {item.stack.map((s) => (
+              <Bubble content={s} />
             ))}
-          </ul>
+          </Row>
+
+          <div>
+            <ul className={cls.content}>
+              {item.details.map((detail) => (
+                <li>{detail}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       ))}
-    </div>
+    </Block>
   );
 };

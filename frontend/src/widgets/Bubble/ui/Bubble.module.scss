@@ -1,0 +1,8 @@
+.bubble {
+  display: block ruby;
+
+  border-radius: var(--primary-border-radius);
+  background-color: var(--primary-bubble-color);
+
+  padding: var(--default-padding);
+}

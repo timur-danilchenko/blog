@@ -1,19 +1,12 @@
-import { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
 import cls from './Block.module.scss';
 import { classNames } from 'shared/lib';
 
-interface BlockProps {
-  title: string;
-  content: string;
+interface BlockProps extends PropsWithChildren {
   className?: string;
 }
 
-export const Block: FC<BlockProps> = ({ title, content, className }) => {
-  return (
-    <div className={classNames(cls.block, {}, [className])}>
-      <div className={cls.title}>{title}</div>
-      <div className={cls.content}>{content}</div>
-    </div>
-  );
+export const Block: FC<BlockProps> = ({ className, children }) => {
+  return <div className={classNames(cls.block, {}, [className])}>{children}</div>;
 };

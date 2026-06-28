@@ -1,5 +1,16 @@
-.header {
-  font-size: var(--header-font-size);
+.padding {
+  padding: var(--default-padding);
+}
+
+.title {
+  display: ruby;
+  width: fit-content;
   font-weight: bold;
-  border-bottom: 1px white solid;
+}
+
+.bubbleline {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  gap: calc(var(--default-gap) / 2);
 }

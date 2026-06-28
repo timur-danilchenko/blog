@@ -14,24 +14,6 @@
   gap: var(--default-gap);
 }
 
-.block {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primary-block-color);
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: var(--primary-border-radius);
-  padding: calc(var(--default-padding) * 2);
-  gap: var(--default-gap);
-}
-
-.code-block {
-  background-color: var(--primary-code-block-color);
-  padding: var(--default-padding);
-  border-radius: var(--primary-border-radius);
-  width: fit-content;
-  gap: var(--default-gap);
-}
-
 $color: var(--primary-font-color);
 $background-color: var(--primary-background-color);
 

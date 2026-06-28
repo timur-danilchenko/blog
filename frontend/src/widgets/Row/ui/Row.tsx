@@ -1,11 +1,10 @@
-import { FC, PropsWithChildren, ReactNode } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
 import cls from './Row.module.scss';
 import { classNames } from 'shared/lib';
 
 interface RowProps extends PropsWithChildren {
   className?: string;
-  children: ReactNode | null;
 }
 
 export const Row: FC<RowProps> = ({ children, className }) => {

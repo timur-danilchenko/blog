@@ -1,26 +1,19 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid white;
-  font-size: var(--header-font-size);
-  font-weight: bold;
-}
-
 .spcbtwn {
   display: flex;
   justify-content: space-between;
 }
 
-.name {
-  gap: var(--default-gap);
-  display: flex;
-  flex-direction: row;
+.left {
+  padding-left: var(--default-padding);
+}
+
+.right {
+  padding-right: var(--default-padding);
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  margin-top: var(--default-margin);
   gap: calc(var(--default-gap) / 2);
   padding-left: calc(var(--default-padding) * 3);
 }
@@ -31,4 +24,15 @@
 
 .bold {
   font-weight: bold;
+}
+
+.tools {
+  gap: calc(var(--default-gap) / 2);
+  overflow: scroll;
+}
+
+.wrapper {
+  background-color: var(--primary2-block-color);
+  padding: var(--default-padding);
+  border-radius: var(--primary-border-radius);
 }

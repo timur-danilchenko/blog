@@ -28,5 +28,5 @@ export interface IResume {
   [ResumeKeys.summary]: IResumeSummary;
   [ResumeKeys.education]: IResumeEducation[];
   [ResumeKeys.experience]: IResumeExperience[];
-  [ResumeKeys.skills]: Record<string, IResumeSkills>;
+  [ResumeKeys.skills]: IResumeSkills;
 }

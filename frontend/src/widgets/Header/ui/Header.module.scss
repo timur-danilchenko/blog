@@ -1,0 +1,14 @@
+.spcbtwn {
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--header-font-size);
+  font-weight: bold;
+}
+
+.underline {
+  border-bottom: 1px white solid;
+}

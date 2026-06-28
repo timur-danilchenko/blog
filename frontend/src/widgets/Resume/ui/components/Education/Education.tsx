@@ -1,10 +1,13 @@
 import { FC } from 'react';
-import { classNames } from 'shared/lib';
+import dayjs from 'dayjs';
+
 import { IResumeEducation, MONTH_FORMAT } from 'shared/types';
 
-import cls from './Education.module.scss';
-import dayjs from 'dayjs';
 import { Row } from 'widgets/Row';
+import { Block } from 'widgets/Block';
+import { Header } from 'widgets/Header';
+
+import cls from './Education.module.scss';
 
 interface EducationProps {
   education: IResumeEducation[] | null;
@@ -12,27 +15,37 @@ interface EducationProps {
 
 export const Education: FC<EducationProps> = ({ education }) => {
   if (education === undefined || education === null) {
-    return <div className={classNames('block', {}, ['width4'])}>Образование не подгрузилось</div>;
+    return <Block className='width4'>Образование не подгрузилось</Block>;
   }
   return (
-    <div className={classNames('block', {}, ['width4', cls.content])}>
-      <div className={cls.header}>Education</div>
-      <ul className={cls.content}>
-        {education.map((item) => (
-          <li key={item.degree}>
-            <Row className={cls.spcbtwn}>
-              <div>
-                {item.specialty} ({item.degree})
-              </div>
-              <div>{item.location}</div>
-            </Row>
-            <Row className={cls.spcbtwn}>
-              <div>{item.university}</div>
-              {dayjs(item.since).format(MONTH_FORMAT)}-{dayjs(item.until).format(MONTH_FORMAT)}
-            </Row>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Block className='width4'>
+      <Header
+        header='Education'
+        underline
+      />
+      <div className={cls.content}>
+        <ul>
+          {education.map((item) => (
+            <div className={cls.wrapper}>
+              <li key={item.degree}>
+                <Row className={cls.spcbtwn}>
+                  <div>
+                    {item.specialty} ({item.degree})
+                  </div>
+                  <div className={cls.right}>{item.location}</div>
+                </Row>
+                <Row className={cls.spcbtwn}>
+                  <div>{item.university}</div>
+                  <div className={cls.right}>
+                    {dayjs(item.since).format(MONTH_FORMAT)}-
+                    {dayjs(item.until).format(MONTH_FORMAT)}
+                  </div>
+                </Row>
+              </li>
+            </div>
+          ))}
+        </ul>
+      </div>
+    </Block>
   );
 };

@@ -1,20 +1,29 @@
-.header {
-  font-weight: bold;
-  font-size: var(--header-font-size);
-  border-bottom: 1px white solid;
-}
 .spcbtwn {
   display: flex;
   justify-content: space-between;
 }
 
-.content {
+.content ul {
   display: flex;
   flex-direction: column;
-  gap: var(--default-gap);
-  padding-left: calc(var(--default-padding) * 3);
+  gap: var(--default-padding);
+}
+
+.wrapper {
+  background-color: var(--primary2-block-color);
+  padding: var(--default-padding);
+  padding-left: calc(var(--default-padding) * 4);
+  border-radius: var(--primary-border-radius);
 }
 
 .content li {
   list-style: square;
+}
+
+.left {
+  padding-left: var(--default-padding);
+}
+
+.right {
+  padding-right: var(--default-padding);
 }

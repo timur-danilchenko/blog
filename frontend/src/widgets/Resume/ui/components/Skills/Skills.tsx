@@ -1,21 +1,41 @@
 import { FC } from 'react';
-import { classNames } from 'shared/lib';
+
 import { IResumeSkills } from 'shared/types';
-import cls from './Skills.module.scss';
+
 import { Row } from 'widgets/Row';
+import { Block } from 'widgets/Block';
+import { Header } from 'widgets/Header';
+import { Bubble } from 'widgets/Bubble';
+
+import cls from './Skills.module.scss';
+import { classNames } from 'shared/lib';
 
 interface SkillsProps {
-  skills: IResumeSkills[] | null;
+  skills: IResumeSkills | null;
 }
 
 export const Skills: FC<SkillsProps> = ({ skills }) => {
   if (skills === undefined || skills === null)
-    return <div className={classNames('block', {}, ['width4'])}>Навыки не загрузились</div>;
+    return <Block className='width4'>Навыки не загрузились</Block>;
 
   return (
-    <div className={classNames('block', {}, ['width4'])}>
-      <div className={cls.header}>Skills</div>
-      {/* {Array(skills.entries()).map((a) => a)} */}
-    </div>
+    <Block className='width4'>
+      <Header
+        header='Skills'
+        underline
+      />
+      <div>
+        {Object.entries(skills).map((v) => (
+          <Row className={cls.padding}>
+            <div className={cls.title}>{`${v[0]}:`}</div>
+            <div className={cls.bubbleline}>
+              {v[1].map((skill) => (
+                <Bubble content={skill} />
+              ))}
+            </div>
+          </Row>
+        ))}
+      </div>
+    </Block>
   );
 };
